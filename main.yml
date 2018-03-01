@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: yes
+  vars_files:
+    - vars.yml
+  tasks:
+     - include: apache-linux.yml
+       when: ansible_os_family == "RedHat"
+     - include: apache-ubuntu.yml
+       when: ansible_os_family == "Debian"
+  handlers:
+     - include: handlers.yml

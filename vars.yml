@@ -1,0 +1,4 @@
+git_url: https://github.com/javahometech/javahome-app
+deploy_path: /var/www/html/
+git_password: Welcome@123
+db_password: Admin@321

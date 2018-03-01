@@ -1,0 +1,5 @@
+---
+ - name: Restart Apache Linux
+   service: name=httpd state=restarted
+ - name: Restart Apache Ubuntu
+   service: name=apache2 state=restarted

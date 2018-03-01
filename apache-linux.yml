@@ -1,0 +1,18 @@
+---
+    - name: Install Apache server
+      yum: name=httpd state=present
+      tags:
+        - package
+    - name: Start and enable Apache server
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+      tags:
+        - enable
+    - name: Clone code from git and deploy to apache
+      git:
+        repo: "{{git_url}}"
+        dest: "{{deploy_path}}"
+      notify: 
+        - Restart Apache Linux
