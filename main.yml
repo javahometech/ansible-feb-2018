@@ -10,4 +10,4 @@
      - include: apache-ubuntu.yml
        when: ansible_os_family == "Debian"
   handlers:
-     - include: handlers.yml
+    - include: handlers.yml

@@ -1,0 +1,9 @@
+--- 
+- hosts: all
+  become: yes
+  tasks:
+    - name: Create User
+      user:
+         name: javahome
+         group: ec2-user
+         password: Admin@1234

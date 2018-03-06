@@ -1,0 +1,9 @@
+---
+
+ - hosts: loadbalancer
+   become: true
+   tasks:
+     - name: Install ngixn server
+       yum:
+         name: nginx
+         state: absent

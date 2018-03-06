@@ -1,0 +1,11 @@
+---
+- hosts: dbservers
+  tasks:
+    - name: Copy files to dbservers
+      copy:
+        src: ./vars.yml
+        dest: /tmp/vars.yml
+    - name: Delete the file
+      file:
+        path: /tmp/vars.yml
+        state: absent
